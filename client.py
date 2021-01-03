@@ -88,7 +88,7 @@ if __name__ == "__main__":
         try:
             client_socket = connect_to_server_socket(args.H, args.P)
             cap = get_video_capture(args.source_video)
-            if args.fire_detection == 'True':
+            if args.fire_detection:
                 stream_video_with_fire_detection_signal(cap, client_socket)
             else:
                 stream_video_without_fire_detection_signal(cap, client_socket)
